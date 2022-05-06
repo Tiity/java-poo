@@ -13,13 +13,9 @@ public final class App {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Saisissez un nombre : ");
-        int number = scanner.nextInt();
-        scanner.close();
+        
+        SimpleCalculator.calcuteTableOf10(scanner.nextInt());
 
-        for (int i = 1; i <= 10; i++) {
-            String resultToFormat = "%d * %d = %d";
-            String result = String.format(resultToFormat, number, i, number * i);
-            System.out.println(result);
-        }
+        scanner.close();
      }
 }
