@@ -12,16 +12,14 @@ public final class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Entrez le premier nombre : ");
-        int firstNumber = scanner.nextInt();
- 
-        System.out.print("Entrez le deuxième nombre : ");
-        int secoundNumber = scanner.nextInt();
+        System.out.print("Saisissez un nombre : ");
+        int number = scanner.nextInt();
         scanner.close();
 
-        String resultToFormat = "Résultat : %d * %d = %d";
-        String result = String.format(resultToFormat, firstNumber, secoundNumber, firstNumber * secoundNumber);
- 
-        System.out.println(result);
+        for (int i = 1; i <= 10; i++) {
+            String resultToFormat = "%d * %d = %d";
+            String result = String.format(resultToFormat, number, i, number * i);
+            System.out.println(result);
+        }
      }
 }
